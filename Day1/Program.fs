@@ -5,7 +5,7 @@ open Common.Files
 let getPairElementCombinations expenses element = 
     expenses |> Array.map (fun e -> (element, e))
 
-let CalculatePart1 desiredSum (expenses:int[]) =
+let calculatePart1 desiredSum (expenses:int[]) =
     let isDesiredSum (val1,val2) = 
         val1 + val2 = desiredSum
 
@@ -15,7 +15,7 @@ let CalculatePart1 desiredSum (expenses:int[]) =
 
     val1 * val2;
 
-let CalculatePart2 desiredSum (expenses:int[]) =
+let calculatePart2 desiredSum (expenses:int[]) =
     let isDesiredSum (val1,val2,val3) = 
         val1 + val2 + val3 = desiredSum
 
@@ -30,12 +30,12 @@ let CalculatePart2 desiredSum (expenses:int[]) =
 
     val1 * val2 * val3;
 
-let CalculatePart1FromFile filePath =
+let calculatePart1FromFile filePath =
     getLineValuesFromFilePath filePath
     |> Array.map int
-    |> CalculatePart1 2020
+    |> calculatePart1 2020
 
-let CalculatePart2FromFile filePath =
+let calculatePart2FromFile filePath =
     getLineValuesFromFilePath filePath
     |> Array.map int
-    |> CalculatePart2 2020
+    |> calculatePart2 2020

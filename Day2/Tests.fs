@@ -6,9 +6,8 @@ open System
 
 [<Fact>]
 let ``Calculate Part1 Test Case`` () =
-    let input = [|1721; 979; 366; 299; 675; 1456|];
-    let result = calculatePart1 2020 input
-    Assert.Equal (514579, result)
+    let result = calculatePart1FromFile "inputTest.txt"
+    Assert.Equal (2, result)
 
 [<Fact>]
 let ``Real Case Part1`` () =
@@ -17,9 +16,8 @@ let ``Real Case Part1`` () =
 
 [<Fact>]
 let ``Calculate Part2 Test Case`` () =
-    let input = [|1721; 979; 366; 299; 675; 1456|];
-    let result = calculatePart2 2020 input
-    Assert.Equal (241861950, result)
+    let result = calculatePart2FromFile "inputTest.txt"
+    Assert.Equal (1, result)
 
 [<Fact>]
 let ``Real Case Part2`` () =
