@@ -9,9 +9,13 @@ module Files =
     let readLines (filePath:string) = seq {
             use sr = new StreamReader (filePath)
             while not sr.EndOfStream do
-                yield sr.ReadLine ()
+                yield sr.ReadLine()
             }
 
     let getLineValuesFromFilePath filePath =
         [| for i in readLines filePath do
                 yield i |]
+
+    let readFile (filePath:string) =
+        use sr = new StreamReader (filePath)
+        sr.ReadToEnd()
