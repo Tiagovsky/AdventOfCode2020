@@ -457,3 +457,5 @@ Scripts/
 
 ### VS Code workspace ###
 *.code-workspace
+
+.ionide

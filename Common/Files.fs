@@ -19,3 +19,9 @@ module Files =
     let readFile (filePath:string) =
         use sr = new StreamReader (filePath)
         sr.ReadToEnd()
+
+    let combine arr =
+        let maxIndex = Array.length arr - 1
+        [| for i = 0 to maxIndex do
+            for j = i + 1 to maxIndex do
+                yield (arr.[i],arr.[j]) |]

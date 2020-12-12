@@ -7,6 +7,7 @@
   <ItemGroup>
     <Compile Include="Operators.fs" />
     <Compile Include="Files.fs" />
+    <Compile Include="Arrays.fs" />
   </ItemGroup>
 
 </Project>
